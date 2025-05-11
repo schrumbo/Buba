@@ -1,0 +1,22 @@
+[
+    {
+        "category": "Mouse",
+        "settings": [
+            {
+                "type": 6,
+                "name": "MouseLock",
+                "value": true
+            },
+            {
+                "type": 6,
+                "name": "MouseUngrab",
+                "value": true
+            },
+            {
+                "type": 10,
+                "name": "mlKeybind",
+                "value": 32
+            }
+        ]
+    }
+]
