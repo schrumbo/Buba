@@ -29,13 +29,33 @@ config
         subcategory: "Mouse",
         configName: "mlKeybind",
         title: "Mouse Lock Key",
-        description: "toggles mouse lock.",
+        description: "lock mouse",
         value: 41,
         registerListener(previousValue, newValue) {
-            KeyBind.removeKeyBind(Client.getKeyBindFromDescription("Draw line to current Waypoint"));
-            new KeyBind("Draw line to current Waypoint", newValue, "Buba");
+            KeyBind.removeKeyBind(Client.getKeyBindFromDescription("lock mouse"));
+            new KeyBind("lock mouse", newValue, "Buba");
         }
     })
+    .addSwitch({
+        category: "Warnings",
+        subcategory: "Nether",
+        title: "Haribo Warning",
+        description: "warnt falls Smoldering Polarization effect ausläuft",
+        value: true,
+        configName: "haribo"
+    })
+    .addColorPicker({
+        category: "General",
+        configName: "textColor",
+        title: "Text Color",
+        description: "change the text color",
+        value: [ 255, 147, 147, 255],
+        subcategory: "Colors",
+        shouldShow(data) {
+            return true;
+        }
+    })
+    
     
 
 const setting = new Settings("Buba", config, "settings/ThemeV2.json", "Buba")

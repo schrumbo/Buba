@@ -10,12 +10,37 @@
             {
                 "type": 6,
                 "name": "MouseUngrab",
-                "value": true
+                "value": false
             },
             {
                 "type": 10,
                 "name": "mlKeybind",
-                "value": 32
+                "value": 0
+            }
+        ]
+    },
+    {
+        "category": "Warnings",
+        "settings": [
+            {
+                "type": 6,
+                "name": "haribo",
+                "value": true
+            }
+        ]
+    },
+    {
+        "category": "General",
+        "settings": [
+            {
+                "type": 5,
+                "name": "textColor",
+                "value": [
+                    57,
+                    255,
+                    218,
+                    255
+                ]
             }
         ]
     }
