@@ -9,53 +9,72 @@ const CREDITS = FileLib.read("Buba", "settings/credits.md")
 
 config
     .addSwitch({
-        category: "Mouse",
-        configName: "MouseLock",
-        title: "Mouse Lock",
-        description: "useful while farming to prevent mouse from moving.",
-        value: true,
-        subcategory: "Mouse"
-    })
-    .addSwitch({
-        category: "Mouse",
-        configName: "MouseUngrab",
-        title: "Ungrab Mouse",
-        description: "ungrabs mouse when locking",
-        value: true,
-        subcategory: "Mouse"
-    })
-    .addKeybind({
-        category: "Mouse",
-        subcategory: "Mouse",
-        configName: "mlKeybind",
-        title: "Mouse Lock Key",
-        description: "lock mouse",
-        value: 41,
-        registerListener(previousValue, newValue) {
-            KeyBind.removeKeyBind(Client.getKeyBindFromDescription("lock mouse"));
-            new KeyBind("lock mouse", newValue, "Buba");
-        }
-    })
-    .addSwitch({
-        category: "Warnings",
-        subcategory: "Nether",
-        title: "Haribo Warning",
-        description: "warnt falls Smoldering Polarization effect ausläuft",
+        category: "Effects",
+        subcategory: "Effects",
+        title: "Gummy",
+        description: "displays duration left of the Smolderin Polarization effect",
         value: true,
         configName: "haribo"
     })
-    .addColorPicker({
-        category: "General",
-        configName: "textColor",
-        title: "Text Color",
-        description: "change the text color",
-        value: [ 255, 147, 147, 255],
-        subcategory: "Colors",
-        shouldShow(data) {
-            return true;
-        }
+    .addSwitch({
+        category: "Effects",
+        subcategory: "Effects",
+        title: "Harvest Harbinger",
+        description: "displays duration left of the Harvest Harbinger effect",
+        value: true,
+        configName: "farming"
     })
-    
+    .addSwitch({
+        category: "Effects",
+        subcategory: "Effects",
+        title: "Stinky Cheese",
+        description: "displays duration left of the Douce Pluie de Stinky Cheese effect",
+        value: true,
+        configName: "pest"
+    })
+    .addSwitch({
+        category: "Effects",
+        subcategory: "Effects",
+        title: "Filet",
+        description: "displays duration left of the Filet O Fortune effect",
+        value: true,
+        configName: "filet"
+    })
+    .addSlider({
+        category: "Effects",
+        subcategory: "Size and Position",
+        title: "Effects X",
+        description: "",
+        options: [0, 1150],
+        value: 0,
+        configName: "effectsX"
+    })
+    .addSlider({
+        category: "Effects",
+        subcategory: "Size and Position",
+        title: "Effects Y",
+        description: "",
+        options: [0, 700],
+        value: 0,
+        configName: "effectsY"
+    })
+    .addSlider({
+        category: "Effects",
+        subcategory: "Size and Position",
+        title: "Size",
+        description: "",
+        options: [0.5, 2.5],
+        value: 1,
+        configName: "effectsSize"
+    })
+    .addSwitch({
+        category: "Effects",
+        subcategory: "Warning",
+        title: "Expire warning",
+        description: "Reminds you to eat your shit",
+        value: true,
+        configName: "effectWarning"
+    })
     
 
 const setting = new Settings("Buba", config, "settings/ThemeV2.json", "Buba")

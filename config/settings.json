@@ -1,46 +1,46 @@
 [
     {
-        "category": "Mouse",
-        "settings": [
-            {
-                "type": 6,
-                "name": "MouseLock",
-                "value": true
-            },
-            {
-                "type": 6,
-                "name": "MouseUngrab",
-                "value": false
-            },
-            {
-                "type": 10,
-                "name": "mlKeybind",
-                "value": 0
-            }
-        ]
-    },
-    {
-        "category": "Warnings",
+        "category": "Effects",
         "settings": [
             {
                 "type": 6,
                 "name": "haribo",
                 "value": true
-            }
-        ]
-    },
-    {
-        "category": "General",
-        "settings": [
+            },
             {
-                "type": 5,
-                "name": "textColor",
-                "value": [
-                    57,
-                    255,
-                    218,
-                    255
-                ]
+                "type": 6,
+                "name": "farming",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "pest",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "filet",
+                "value": false
+            },
+            {
+                "type": 1,
+                "name": "effectsX",
+                "value": 884
+            },
+            {
+                "type": 1,
+                "name": "effectsY",
+                "value": 10
+            },
+            {
+                "type": 1,
+                "name": "effectsSize",
+                "value": 0.96
+            },
+            {
+                "type": 6,
+                "name": "effectWarning",
+                "value": true
             }
         ]
     }

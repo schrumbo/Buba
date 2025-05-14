@@ -1,3 +1,2 @@
-import "./util/keyManager"
-import "./features/mouselock"
-import "./features/warnings"
+//import "./util/keyManager"
+import "./features/effects"

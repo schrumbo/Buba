@@ -1,0 +1,14 @@
+{
+  "name": "Opal",
+  "author": "Farlow",
+  "colours": {
+    "panel": -15526631,
+    "box": -15724013,
+    "background": -15987185,
+    "selection": -14736599,
+    "logo": -1,
+    "text": -1,
+    "accent": -1,
+    "buttonBackground": -15066080
+  }
+}

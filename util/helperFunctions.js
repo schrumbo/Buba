@@ -169,6 +169,9 @@ class LocationChecker {
     }
 }
 
+
+
+
 export const hollowsChecker = new LocationChecker(["Goblin", "Jungle", "Mithril", "Precursor", "Magma", "Crystal", "Khazad", "Divan", "City"])
 export const dwarvenChecker = new LocationChecker(["Dwarven", "Royal", "Palace", "Library", "Mist", "Cliffside", "Quarry", "Gateway", "Wall", "Forge", "Far", "Burrows", "Springs", "Upper", "Glacite"])
 export const foragingChecker = new LocationChecker(["§aDark Thic", "§aBirch Par", "§aSpruce Wo", "§aSavanna W", "§aJungle Is", "§bForest"])
@@ -221,3 +224,15 @@ export function updateRegisters() {
 export function rgbToColorInt(red, green, blue) {
     return (255 << 24) | (red << 16) | (green << 8) | blue;
 }
+
+
+
+
+
+const FORMATTING_CODE_PATTERN = /§[0-9a-fk-or]/gi;
+
+Object.defineProperty(String.prototype, "noControlCodes", {
+  get: function () {
+    return this.replace(FORMATTING_CODE_PATTERN, "");
+  },
+});

@@ -1,0 +1,14 @@
+{
+  "name": "Classic",
+  "author": "Farlow",
+  "colours": {
+    "panel": 3223857,
+    "box": 2302755,
+    "background": 2302755,
+    "selection": 986895,
+    "logo": 16379097,
+    "text": -1,
+    "accent": 4366591,
+    "buttonBackground": 986895
+  }
+}
