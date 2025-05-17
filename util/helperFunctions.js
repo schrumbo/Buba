@@ -236,3 +236,8 @@ Object.defineProperty(String.prototype, "noControlCodes", {
     return this.replace(FORMATTING_CODE_PATTERN, "");
   },
 });
+
+
+function delay(seconds){
+    return new Promise(resolve => setTimeout(resolve, seconds * 1000));
+}

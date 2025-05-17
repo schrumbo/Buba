@@ -1,5 +1,5 @@
 import settings from "../settings/settings";
-import "../util/helperFunctions"
+import "../util/helperFunctions";
 
 
 
@@ -11,7 +11,7 @@ const effectMining = "Filet O' Fortune";
 
 
 register("renderOverlay", renderText);
-register("step", effectWarning).setFps(1);
+register("step", effectWarning).setDelay(5);
 
 function renderText() {
 
@@ -55,39 +55,44 @@ function renderText() {
     
 }
 
-let lastWarning = 0;
-const COOLDOWN_MS = 1 * 60 * 1000;
+
 
 function effectWarning(){
     if(!settings().effectWarning)return;
 
-    const currentTime = Date.now();
-    if (currentTime - lastWarning < COOLDOWN_MS) {
-        return;
+    let warningTime = settings().warningTime;
+    let time = 0;
+
+    if(warningTime == 0){
+        time = 10;
+    }else if (warningTime == 1){
+        time = 5;
+    }else if (warningTime == 2){
+        time = 4;
+    }else if (warningTime == 3){
+        time = 3;
+    }else if (warningTime == 4){
+        time = 2;
     }
+    
+
 
     const players = TabList.getNames();
     players.forEach(player => {
         noCodes = player.noControlCodes;
-        if(noCodes.includes(effect) && noCodes.includes(effect + "5m")){
-            World.playSound("mob.horse.donkey.death", 1000, 5);
-            Client.showTitle("§2FRISS GUMMI", "§7BITCHASS", 10, 100, 10);
-            lastWarning = Date.now();
+
+        if(noCodes.includes(effect + " " + time +"m")){
+            Client.showTitle("§2FRISS GUMMI", "§7POLAR", 10, 100, 10);
         }
-        if(noCodes.includes(effect) && noCodes.includes(effectPest + " 5m")){
-            World.playSound("mob.horse.donkey.death", 1000, 5);
-            Client.showTitle("§0LE CACA", "§7FICKER", 10, 100, 10);
-            lastWarning = Date.now();
+        if(noCodes.includes(effectPest + " " + time +"m")){
+            Client.showTitle("§0LE CACA", "§7CACA", 10, 100, 10);
         }
-        if(noCodes.includes(effect) && noCodes.includes(effectGarden + " 5m")){
-            World.playSound("mob.horse.donkey.death", 1000, 5);
-            Client.showTitle("§nKAROTTE", "§7VEGANER", 10, 100, 10);
-            lastWarning = Date.now();
+        if(noCodes.includes(effectGarden + " " + time +"m")){
+            Client.showTitle("§nKAROTTE", "§7VEGAN", 10, 100, 10);
         }
-        if(noCodes.includes(effect) && noCodes.includes(effectMining + " 5m")){
-            World.playSound("mob.horse.donkey.death", 1000, 5);
-            Client.showTitle("§3FICH FICH", "§7MINORS", 10, 100, 10);
-            lastWarning = Date.now();
+        if(noCodes.includes(effectMining + " " + time +"m")){
+
+            Client.showTitle("§3FICH FICH", "§7FILET", 10, 100, 10);
         }
     });
 

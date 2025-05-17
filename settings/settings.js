@@ -9,39 +9,39 @@ const CREDITS = FileLib.read("Buba", "settings/credits.md")
 
 config
     .addSwitch({
-        category: "Effects",
-        subcategory: "Effects",
-        title: "Gummy",
-        description: "displays duration left of the Smolderin Polarization effect",
+        category: "Effekte",
+        subcategory: "Effekte",
+        title: "Gummi",
+        description: "Zeigt Effektdauer",
         value: true,
         configName: "haribo"
     })
     .addSwitch({
-        category: "Effects",
-        subcategory: "Effects",
+        category: "Effekte",
+        subcategory: "Effekte",
         title: "Harvest Harbinger",
-        description: "displays duration left of the Harvest Harbinger effect",
+        description: "Zeigt Effektdauer",
         value: true,
         configName: "farming"
     })
     .addSwitch({
-        category: "Effects",
-        subcategory: "Effects",
+        category: "Effekte",
+        subcategory: "Effekte",
         title: "Stinky Cheese",
-        description: "displays duration left of the Douce Pluie de Stinky Cheese effect",
+        description: "Zeigt Effektdauer",
         value: true,
         configName: "pest"
     })
     .addSwitch({
-        category: "Effects",
-        subcategory: "Effects",
+        category: "Effekte",
+        subcategory: "Effekte",
         title: "Filet",
-        description: "displays duration left of the Filet O Fortune effect",
+        description: "Zeigt Effektdauer",
         value: true,
         configName: "filet"
     })
     .addSlider({
-        category: "Effects",
+        category: "Effekte",
         subcategory: "Size and Position",
         title: "Effects X",
         description: "",
@@ -50,7 +50,7 @@ config
         configName: "effectsX"
     })
     .addSlider({
-        category: "Effects",
+        category: "Effekte",
         subcategory: "Size and Position",
         title: "Effects Y",
         description: "",
@@ -59,7 +59,7 @@ config
         configName: "effectsY"
     })
     .addSlider({
-        category: "Effects",
+        category: "Effekte",
         subcategory: "Size and Position",
         title: "Size",
         description: "",
@@ -68,13 +68,33 @@ config
         configName: "effectsSize"
     })
     .addSwitch({
-        category: "Effects",
+        category: "Effekte",
         subcategory: "Warning",
-        title: "Expire warning",
-        description: "Reminds you to eat your shit",
+        title: "Mindesthaltbarkeit",
+        description: "Erinnerung zu konsumieren",
         value: true,
         configName: "effectWarning"
     })
+    .addDropDown({
+        category: "Effekte",
+        configName: "warningTime",
+        title: "Warnungszeitpunkt",
+        description: "Wähle Zeitpunkt wann die Effektwarnung eintritt",
+        options: ["10m", "5m", "4m", "3m", "2m"],
+        value: 3,
+        subcategory: "Warning"
+    })
+    .addSwitch({
+        category: "Slayer",
+        subcategory: "Slayer",
+        title: "Boss Warning",
+        description: "Warnt falls ein Boss spawned",
+        value: true,
+        configName: "bossWarning"
+    })
+    
+    
+    
     
 
 const setting = new Settings("Buba", config, "settings/ThemeV2.json", "Buba")

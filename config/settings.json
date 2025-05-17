@@ -1,6 +1,6 @@
 [
     {
-        "category": "Effects",
+        "category": "Effekte",
         "settings": [
             {
                 "type": 6,
@@ -10,17 +10,17 @@
             {
                 "type": 6,
                 "name": "farming",
-                "value": false
+                "value": true
             },
             {
                 "type": 6,
                 "name": "pest",
-                "value": false
+                "value": true
             },
             {
                 "type": 6,
                 "name": "filet",
-                "value": false
+                "value": true
             },
             {
                 "type": 1,
@@ -30,16 +30,31 @@
             {
                 "type": 1,
                 "name": "effectsY",
-                "value": 10
+                "value": 0
             },
             {
                 "type": 1,
                 "name": "effectsSize",
-                "value": 0.96
+                "value": 0.99
             },
             {
                 "type": 6,
                 "name": "effectWarning",
+                "value": true
+            },
+            {
+                "type": 7,
+                "name": "warningTime",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "category": "Slayer",
+        "settings": [
+            {
+                "type": 6,
+                "name": "bossWarning",
                 "value": true
             }
         ]
